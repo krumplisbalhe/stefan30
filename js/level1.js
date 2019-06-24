@@ -8,7 +8,7 @@ const level1Container = document.getElementById('level1Container')
 const pernille = document.getElementById('pernille')
 const timeContainer = document.getElementById('timeContainer')
 
-const timeLength = 500
+const timeLength = 50
 
 window.onload = () => sequence()
 
@@ -168,5 +168,11 @@ const pernilleStopsSpeaking = () => {
 levelCompleted = () => {
 	timeContainer.style.opacity = '0'
 	level.textContent = 'LEVEL COMPLETED'
+	level.classList.add('blinkMe')
 	level.style.left = '38%'
+	setTimeout(toLevel2, timeLength*6)
+}
+
+toLevel2 = () => {
+	window.location.href = 'level2.html'
 }

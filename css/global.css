@@ -1,0 +1,17 @@
+@font-face {
+	font-family: "pixelFont";
+	src: url("../Font/m5x7.ttf");
+}
+
+@font-face {
+	font-family: "pixelFatFont";
+	src: url("../Font/m6x11.ttf");
+}
+
+body, html {
+	height: 100%;
+	width: 100%;
+	font-family: "pixelFont";
+	color: black;
+	font-size: 42px;
+}
