@@ -8,7 +8,7 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background: url("../Backgrounds/level2Bg.gif");
+	background: url("../Backgrounds/room.png");
 	opacity: 0.9;
   background-position: center;
   background-repeat: no-repeat;
@@ -56,8 +56,8 @@ p{
 
 #level{
 	font-family: "pixelFatFont";
-	color: #5C5F82;
-	font-size: 50px;
+	color: #CC7673;
+	font-size: 80px;
 	position: fixed;
 	top: 20px;
 	left: 20px;
@@ -67,9 +67,9 @@ p{
 	width: 240px;
 	height: 240px;
 	position: fixed;
-	bottom: 20px;
+	bottom: 0px;
 	right: 100px;
-	background: url("../Characters/Pernille/PernilleRooting.gif");
+	background: url("../Characters/Stina/StinaTalking.gif");
 	background-position: center;
   background-repeat: no-repeat;
 	background-size: cover;
@@ -77,10 +77,96 @@ p{
 	pointer-events: none;
 }
 
+#backgroundBox{
+	background: url("../Backgrounds/textBox.png");
+	background-position: center;
+  background-repeat: no-repeat;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	opacity: 0.8;
+	display: none;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	animation: fadeIn 2s ease-in;
+}
+
 #letters{
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	justify-content: space-around;
-	width: 500px;
+	justify-content: space-between;
+	width: 400px;
+	font-weight: bold;
+}
+
+#letters > div:hover{
+	color: #CC7673;
+	animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+#solution{
+	font-size: 100px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	width: 400px;
+	padding-bottom: 40px;
+}
+
+.empty2{
+	width: 40px;
+}
+
+.wrongBlinking{
+	animation: blink 1s linear infinite;
+}
+
+@keyframes blink{
+	0%{opacity: 0;}
+	50%{opacity: .5;}
+	100%{opacity: 1;}
+}
+
+#SO, #Sn, #Sk1, #Se, #Sl, #SJ, #So, #Sa, #Sk2, #Si, #Sm{
+	opacity: 0;
+}
+
+.blinkMe{
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0.8;
+	}
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
 }

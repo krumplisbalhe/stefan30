@@ -8,7 +8,7 @@ const level1Container = document.getElementById('level1Container')
 const pernille = document.getElementById('pernille')
 const timeContainer = document.getElementById('timeContainer')
 
-const timeLength = 50
+const timeLength = 50 //TODO: TIME
 
 window.onload = () => sequence()
 
@@ -114,7 +114,7 @@ const speechBubbleTextChange7 = () => {
 
 const playFreeSki = () => {
 	level1Container.style.backgroundImage = 'none'
-	level1Container.style.backgroundColor = 'white'
+	level1Container.style.backgroundColor = '#F3F5F4'
 	stefan.style.opacity = '0'
 	stefan.style.pointerEvents = 'none'
 	speechBubble.style.opacity = '0'
@@ -160,12 +160,12 @@ const pernilleStopsSpeaking = () => {
 	speechP.style.opacity = '0'
 	speechBubble.style.opacity = '0'
 	timeContainer.style.opacity = '1'
-	var halfMinute = 6 * 0.5,
+	var halfMinute = 60 * 0.5,
 	display = document.querySelector('#time')
 	startTimer(halfMinute, display)
 }
 
-levelCompleted = () => {
+const levelCompleted = () => {
 	timeContainer.style.opacity = '0'
 	level.textContent = 'LEVEL COMPLETED'
 	level.classList.add('blinkMe')
