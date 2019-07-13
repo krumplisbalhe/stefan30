@@ -15,6 +15,18 @@
 	background-size: cover;
 }
 
+#money{
+	position: fixed;
+	top: 110px;
+	width: 125px;
+	height: 80px;
+	background: url("../images/money.gif");
+	background-position: center;
+  background-repeat: no-repeat;
+	background-size: contain;
+	opacity: 0;
+}
+
 #stefan{
 	width: 240px;
 	height: 240px;

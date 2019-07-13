@@ -1,0 +1,137 @@
+#level3Container{
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: url("../Backgrounds/level4Bg.png");
+	opacity: 0.9;
+  background-position: center;
+  background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#code{
+	font-family: "pixelFont";
+	font-size: 25px;
+	width: 15%;
+	padding: 20px 60px;
+	margin: 10px 0;
+	box-sizing: border-box;
+	border: 5px solid #ccc;
+	transition: 0.5s;
+	opacity: 0;
+}
+
+#code:focus{
+	border: 5px solid #5DC6A7;
+	outline: 0;
+}
+
+#codeBtn{
+	font-family: "pixelFont";
+	font-size: 28px;
+	background-color: white;
+  border: none;
+  color: #5DC6A7;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+	cursor: pointer;
+	opacity: 0;
+}
+
+#codeBtn:focus{
+	background-color: #5DC6A7;
+	color: white;
+}
+
+#divorce{
+	font-family: "pixelFatFont";
+	text-transform: uppercase;
+	opacity: 0;
+	letter-spacing: 4px;
+	color: white;
+	display: flex;
+	align-items: center;
+}
+
+#stefan{
+	width: 240px;
+	height: 240px;
+	position: fixed;
+	bottom: 10px;
+	background: url("../Characters/Stefan/Stefan-mild.png");
+	background-position: center;
+  background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#speechBubble{
+	width: 530px;
+	height: 185px;
+	position: fixed;
+	bottom: 180px;
+	background: url("../images/speechBubble.png");
+	background-position: center;
+  background-repeat: no-repeat;
+	background-size: cover;
+	opacity: 0;
+}
+
+p{
+	text-align: center;
+	margin-top: 15px;
+	margin-left: 95px;
+	margin-right: 45px;
+}
+
+#level{
+	font-family: "pixelFatFont";
+	color: white;
+	font-size: 80px;
+	position: fixed;
+	top: 20px;
+	left: 20px;
+}
+
+#rie{
+	width: 240px;
+	height: 240px;
+	position: fixed;
+	bottom: 0px;
+	right: 100px;
+	background: url("../Characters/Rie/Rie1.png");
+	background-position: center;
+  background-repeat: no-repeat;
+	background-size: cover;
+	pointer-events: none;
+}
+
+.wrongBlinking{
+	animation: blink 1s linear infinite;
+}
+
+@keyframes blink{
+	0%{opacity: 0;}
+	50%{opacity: .5;}
+	100%{opacity: 1;}
+}
+
+#SO, #Sn, #Sk1, #Se, #Sl, #SJ, #So, #Sa, #Sk2, #Si, #Sm{
+	opacity: 0;
+}
+
+.blinkMe{
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}

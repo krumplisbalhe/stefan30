@@ -38,8 +38,9 @@ const letterm = document.getElementById('m')
 const solutionm = document.getElementById('Sm')
 
 const backgroundBox = document.getElementById('backgroundBox')
+const money = document.getElementById('money')
 
-const timeLength = 500  //TODO: TIME
+const timeLength = 50  //TODO: TIME
 
 window.onload = () => sequence()
 
@@ -329,8 +330,14 @@ const levelCompleted = () => {
 	level.classList.remove('wrongBlinking')
 	stefan.style.backgroundImage = 'url(../Characters/Stefan/StefanLooksUpHappy.png)'
 	stina.style.backgroundImage = 'url(../Characters/Stina/StinaHappy.png)'
+	money.style.opacity = 1
 	level.textContent = 'LEVEL COMPLETED'
 	level.classList.add('blinkMe')
-	level.style.left = '30%'
-	setTimeout(toLevel2, timeLength*6)
+	level.style.left = '50%'
+	level.style.transform = "translateX(-262px)"
+	setTimeout(toLevel3, timeLength*6)
+}
+
+toLevel3 = () => {
+	window.location.href = 'level3.html'
 }

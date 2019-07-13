@@ -169,7 +169,8 @@ const levelCompleted = () => {
 	timeContainer.style.opacity = '0'
 	level.textContent = 'LEVEL COMPLETED'
 	level.classList.add('blinkMe')
-	level.style.left = '38%'
+	level.style.left = '50%'
+		level.style.transform = "translateX(-262px)"
 	setTimeout(toLevel2, timeLength*6)
 }
 
