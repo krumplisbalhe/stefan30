@@ -103,5 +103,5 @@ function checkCode() {
 }
 
 toLevel4 = () => {
-	// window.location.href = 'level4.html'
+	window.location.href = 'level4.html'
 }

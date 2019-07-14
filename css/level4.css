@@ -1,4 +1,4 @@
-#level3Container{
+#level4Container{
 	height: 100%;
 	width: 100%;
 	top: 0;
@@ -8,56 +8,43 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background: url("../Backgrounds/level4Bg.png");
+	background: url("../Backgrounds/casino.png");
 	opacity: 0.9;
   background-position: center;
   background-repeat: no-repeat;
 	background-size: cover;
 }
 
-#code{
-	font-family: "pixelFont";
-	font-size: 25px;
-	width: 15%;
-	padding: 20px 60px;
-	margin: 10px 0;
-	box-sizing: border-box;
-	border: 5px solid #ccc;
+#options{
+	width: 60%;
 	transition: 0.5s;
 	opacity: 0;
-}
-
-#code:focus{
-	border: 5px solid #5DC6A7;
-	outline: 0;
-}
-
-#codeBtn{
-	font-family: "pixelFont";
-	font-size: 25px;
-	background-color: white;
-  border: none;
-  color: #5DC6A7;
-  padding: 10px 20px;
-  text-decoration: none;
-  margin: 4px 2px;
-	cursor: pointer;
-	opacity: 0;
-}
-
-#codeBtn:focus{
-	background-color: #5DC6A7;
-	color: white;
-}
-
-#divorce{
-	font-family: "pixelFatFont";
-	text-transform: uppercase;
-	opacity: 0;
-	letter-spacing: 4px;
-	color: white;
 	display: flex;
 	align-items: center;
+	justify-content: space-evenly;
+	font-size: 28px;
+	color: white;
+}
+
+#option1>img:hover, #option2>img:hover, #option3>img:hover{
+	transition: all .2s ease-in-out;
+	animation: grow 0.5s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+#option1,#option2,#option3{
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.text1{
+	margin-top: -20px;
+}
+
+.img1{
+	margin-top: -45px;
 }
 
 #stefan{
@@ -99,13 +86,13 @@ p{
 	left: 20px;
 }
 
-#rie{
+#anette{
 	width: 240px;
 	height: 240px;
 	position: fixed;
 	bottom: 0px;
 	right: 100px;
-	background: url("../Characters/Rie/Rie1.png");
+	background: url("../Characters/Anette/Anette1.png");
 	background-position: center;
   background-repeat: no-repeat;
 	background-size: cover;
@@ -133,5 +120,11 @@ p{
 @keyframes blinker {
   50% {
     opacity: 0;
+  }
+}
+
+@keyframes grow {
+  to{
+    transform: scale(1.65);
   }
 }

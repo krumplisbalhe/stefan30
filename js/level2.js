@@ -57,7 +57,7 @@ const sequence = async () => {
 	await speechBubbleTextChange4()
 	await speechBubbleTextChange5()
 	await stefanStopsSpeaking()
-	await  speechBubbleTextChange6()
+	await speechBubbleTextChange6()
 	await	speechBubbleTextChange7()
 	await	speechBubbleTextChange8()
 	await	speechBubbleTextChange9()
