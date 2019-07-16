@@ -80,7 +80,7 @@ function checkCode() {
 			anette.style.backgroundImage = 'url(../Characters/Anette/AnetteHappy.png)'
 			stefan.style.backgroundImage = 'url(../Characters/Stefan/StefanLooksUpHappy.png)'
 			coin.style.transform = 'scale(2.5)'
-			// setTimeout(toLevel5, timeLength*6)
+			setTimeout(toLevel5, timeLength*6)
 		} else {
 			level.textContent = 'WRONG'
 			level.classList.add('wrongBlinking')

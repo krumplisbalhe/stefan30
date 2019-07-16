@@ -1,4 +1,4 @@
-#level4Container{
+#level5Container{
 	height: 100%;
 	width: 100%;
 	top: 0;
@@ -8,43 +8,26 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background: url("../Backgrounds/casino.png");
+	background: url("../Backgrounds/kitchen.png");
 	opacity: 0.9;
   background-position: center;
   background-repeat: no-repeat;
 	background-size: cover;
 }
 
-#options{
-	width: 60%;
+#foods{
+	width: 70%;
+	height: 50%;
 	transition: 0.5s;
 	opacity: 0;
 	display: flex;
 	align-items: center;
 	justify-content: space-evenly;
-	font-size: 28px;
-	color: white;
+	position: relative;
 }
 
-#option1>img:hover, #option2>img:hover, #option3>img:hover{
-	transition: all .2s ease-in-out;
-	animation: grow 0.5s cubic-bezier(.36,.07,.19,.97) both;
-}
-
-#option1,#option2,#option3{
-	padding: 10px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
-
-.text1{
-	margin-top: -20px;
-}
-
-.img1{
-	margin-top: -45px;
+#foods>*{
+	position: absolute;
 }
 
 #stefan{
@@ -86,7 +69,7 @@ p{
 	left: 20px;
 }
 
-#anette{
+#mama{
 	width: 240px;
 	height: 240px;
 	position: fixed;
@@ -97,6 +80,12 @@ p{
   background-repeat: no-repeat;
 	background-size: cover;
 	pointer-events: none;
+}
+
+#timeContainer{
+	padding-top: 50px;
+	pointer-events: none;
+	opacity: 0;
 }
 
 .wrongBlinking{

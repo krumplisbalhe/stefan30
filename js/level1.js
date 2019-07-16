@@ -8,7 +8,7 @@ const level1Container = document.getElementById('level1Container')
 const pernille = document.getElementById('pernille')
 const timeContainer = document.getElementById('timeContainer')
 
-const timeLength = 50 //TODO: TIME
+const timeLength = 500 //TODO: TIME
 
 window.onload = () => sequence()
 
@@ -170,7 +170,7 @@ const levelCompleted = () => {
 	level.textContent = 'LEVEL COMPLETED'
 	level.classList.add('blinkMe')
 	level.style.left = '50%'
-		level.style.transform = "translateX(-262px)"
+	level.style.transform = "translateX(-262px)"
 	setTimeout(toLevel2, timeLength*6)
 }
 

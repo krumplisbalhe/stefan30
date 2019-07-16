@@ -40,7 +40,7 @@ const solutionm = document.getElementById('Sm')
 const backgroundBox = document.getElementById('backgroundBox')
 const money = document.getElementById('money')
 
-const timeLength = 50  //TODO: TIME
+const timeLength = 500  //TODO: TIME
 
 window.onload = () => sequence()
 
