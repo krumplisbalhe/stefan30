@@ -7,7 +7,7 @@ const foods = document.getElementById('foods')
 const coin = document.getElementById('coin')
 const timeContainer = document.getElementById('timeContainer')
 
-const timeLength = 50  //TODO: TIME
+const timeLength = 500  //TODO: TIME
 
 window.onload = () => sequence()
 
@@ -32,7 +32,7 @@ const startSpeaking = () => {
 
 const mamaTalks1 = () => {
 	stefan.style.backgroundImage = 'url(../Characters/Stefan/Stefan-mild.png)'
-	mama.style.backgroundImage = 'url(../Characters/Anette/AnetteTalking.gif)'
+	mama.style.backgroundImage = 'url(../Characters/Mama/MamaSpeaking.gif)'
 	speechBubble.style.right = '0px'
 	speechP.innerHTML = 'Peter is waiting for you'
   return waiter(timeLength*4)
@@ -49,7 +49,7 @@ const mamaTalks3 = () => {
 }
 
 const mamaTalks4 = () => {
-  speechP.innerHTML = 'have 15seconds to eat...'
+  speechP.innerHTML = 'have 15 seconds to eat...'
   return waiter(timeLength*4)
 }
 
@@ -88,7 +88,7 @@ startTimer = (duration, display) => {
 						level.classList.add('blinkMe')
 						level.style.left = '50%'
 						level.style.transform = "translateX(-262px)"
-						mama.style.backgroundImage = 'url(../Characters/Anette/Anette1.png)'
+						mama.style.backgroundImage = 'url(../Characters/Mama/MamaHappy.png)'
 						stefan.style.backgroundImage = 'url(../Characters/Stefan/StefanLooksUpHappy.png)'
 						speechP.style.opacity = '1'
 						speechBubble.style.opacity = '1'
@@ -106,7 +106,7 @@ startTimer = (duration, display) => {
 }
 
 const mamaStops = () => {
-	mama.style.backgroundImage = 'url(../Characters/Anette/Anette1.png)'
+	mama.style.backgroundImage = 'url(../Characters/Mama/MamaSmiling.png)'
 	stefan.style.backgroundImage = 'url(../Characters/Stefan/StefanThinking.gif)'
 	speechP.style.opacity = '0'
 	speechBubble.style.opacity = '0'
@@ -171,12 +171,12 @@ const mamaGoodbye = () => {
 	level.classList.add('blinkMe')
 	level.style.left = '50%'
 	level.style.transform = "translateX(-262px)"
-	mama.style.backgroundImage = 'url(../Characters/Anette/Anette1.png)'
-	stefan.style.backgroundImage = 'url(../Characters/Stefan/StefanLooksUpHappy.png)'
+	mama.style.backgroundImage = 'url(../Characters/Mama/MamaHappy.png)'
+	stefan.style.backgroundImage = 'url(../Characters/Stefan/StefanLooksUpSad.png)'
 	speechP.style.opacity = '1'
 	speechBubble.style.opacity = '1'
 	foods.style.opacity = '0'
-	speechP.innerHTML = 'Lol you were slow! You'
+	speechP.innerHTML = 'Lol, you were slow! You'
 	setTimeout(mamaGoodbye2, timeLength*4)
 }
 
@@ -187,5 +187,5 @@ const mamaGoodbye2 = () => {
 }
 
 toLevel6 = () => {
-	// window.location.href = 'level6.html'
+	window.location.href = 'level6.html'
 }

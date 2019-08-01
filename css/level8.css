@@ -1,4 +1,4 @@
-#level5Container{
+#level8Container{
 	height: 100%;
 	width: 100%;
 	top: 0;
@@ -8,26 +8,37 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background: url("../Backgrounds/kitchen.png");
+	background: url("../Backgrounds/pcroom.gif");
 	opacity: 0.9;
   background-position: center;
   background-repeat: no-repeat;
 	background-size: cover;
 }
 
-#foods{
-	width: 70%;
-	height: 50%;
+#options{
+	background-color: #CE8F99;
+	border-radius: 25px;
+	width: 60%;
 	transition: 0.5s;
 	opacity: 0;
 	display: flex;
 	align-items: center;
 	justify-content: space-evenly;
-	position: relative;
+	font-size: 28px;
+	color: white;
 }
 
-#foods>*{
-	position: absolute;
+#option1>img:hover, #option2>img:hover, #option3>img:hover{
+	transition: all .2s ease-in-out;
+	animation: grow 0.5s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+#option1,#option2,#option3{
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 #stefan{
@@ -69,23 +80,17 @@ p{
 	left: 20px;
 }
 
-#mama{
+#pia{
 	width: 240px;
 	height: 240px;
 	position: fixed;
 	bottom: 0px;
 	right: 100px;
-	background: url("../Characters/Mama/MamaSmiling.png");
+	background: url("../Characters/Mormor/MormorHappy.png");
 	background-position: center;
   background-repeat: no-repeat;
 	background-size: cover;
 	pointer-events: none;
-}
-
-#timeContainer{
-	padding-top: 50px;
-	pointer-events: none;
-	opacity: 0;
 }
 
 .wrongBlinking{
