@@ -16,6 +16,7 @@ const waiter = delay => new Promise(resolve => setTimeout(resolve, delay))
 const sequence = async () => {
 	await startSpeaking()
 	// await waiter(500)
+	await stefanTalks1()
 	await rieTalks1()
 	await rieTalks2()
 	await rieTalks3()
@@ -29,7 +30,12 @@ const sequence = async () => {
 const startSpeaking = () => {
 	stefan.style.backgroundImage = 'url(../Characters/Stefan/StefanSpeaking.gif)'
 	speechBubble.style.opacity = '1'
-	speechP.innerHTML = 'Hi Rie!'
+	speechP.innerHTML = 'Hi Rie! Do you know'
+  return waiter(timeLength*4)
+}
+
+const stefanTalks1 = () => {
+	speechP.innerHTML = 'where is the Princess?'
   return waiter(timeLength*4)
 }
 
@@ -37,12 +43,12 @@ const rieTalks1 = () => {
 	stefan.style.backgroundImage = 'url(../Characters/Stefan/Stefan-mild.png)'
 	rie.style.backgroundImage = 'url(../Characters/Rie/RieTalking.gif)'
 	speechBubble.style.right = '0px'
-	speechP.innerHTML = 'Hi Stefan! To continue to'
+	speechP.innerHTML = 'To continue to the'
   return waiter(timeLength*4)
 }
 
 const rieTalks2 = () => {
-	speechP.innerHTML = 'the next level, and save'
+	speechP.innerHTML = 'next level, and save'
   return waiter(timeLength*4)
 }
 

@@ -4,7 +4,7 @@ const speechP = document.getElementById('speechP')
 const pia = document.getElementById('pia')
 const level = document.getElementById('level')
 const options = document.getElementById('options')
-const pebber = document.getElementById('pebber')
+const correct = document.getElementById('option1')
 
 const timeLength = 50 //TODO: TIME
 
@@ -19,6 +19,7 @@ const sequence = async () => {
 	await piaTalks3()
 	await piaTalks4()
 	await piaTalks5()
+	await piaTalks6()
 	await piaStops()
 	await checkCode()
 }
@@ -26,7 +27,7 @@ const sequence = async () => {
 const startSpeaking = () => {
 	stefan.style.backgroundImage = 'url(../Characters/Stefan/StefanSpeaking.gif)'
 	speechBubble.style.opacity = '1'
-	speechP.innerHTML = 'Hi pia!'
+	speechP.innerHTML = 'How can I help you, Pia?'
   return waiter(timeLength*4)
 }
 
@@ -34,32 +35,37 @@ const piaTalks1 = () => {
 	stefan.style.backgroundImage = 'url(../Characters/Stefan/Stefan-mild.png)'
 	pia.style.backgroundImage = 'url(../Characters/Pia/PiaSpeaking.gif)'
 	speechBubble.style.right = '0px'
-	speechP.innerHTML = 'Hi Stefan, this level'
+	speechP.innerHTML = 'Tell me what happened'
   return waiter(timeLength*4)
 }
 
 const piaTalks2 = () => {
-	speechP.innerHTML = 'you have to answer the'
+	speechP.innerHTML = 'to Bambi\'s mother FOR REAL'
   return waiter(timeLength*4)
 }
 
 const piaTalks3 = () => {
-	speechP.innerHTML = 'question: What is missing'
+	speechP.innerHTML = 'in the Disney movie.'
   return waiter(timeLength*4)
 }
 
 const piaTalks4 = () => {
-  speechP.innerHTML = 'from the PC room?'
+  speechP.innerHTML = 'If you answer correctly,'
   return waiter(timeLength*4)
 }
 
 const piaTalks5 = () => {
-  speechP.innerHTML = 'Choose the right one!'
+  speechP.innerHTML = 'You are one challange away'
+  return waiter(timeLength*4)
+}
+
+const piaTalks6 = () => {
+  speechP.innerHTML = 'from saving the Princess!'
   return waiter(timeLength*4)
 }
 
 const piaStops = () => {
-	pia.style.backgroundImage = 'url(../Characters/Pia/PiaHappy.png)'
+	pia.style.backgroundImage = 'url(../Characters/Pia/PiaSpeaks1.png)'
 	stefan.style.backgroundImage = 'url(../Characters/Stefan/StefanThinking.gif)'
 	speechP.style.opacity = '0'
 	speechBubble.style.opacity = '0'
@@ -72,7 +78,7 @@ const piaStops = () => {
 function checkCode() {
 	document.getElementById('options').addEventListener('click', function(evt) {
 		var target = evt.target
-		if (target.id === 'pebber') {
+		if (target.id === 'option1') {
 			level.style.left = '50%'
 			level.style.transform = "translateX(-262px)"
 			level.textContent = "LEVEL COMPLETED"

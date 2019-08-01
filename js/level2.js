@@ -100,12 +100,12 @@ const speechBubbleTextChange3 = () => {
 }
 
 const speechBubbleTextChange4 = () => {
-  speechP.innerHTML = 'Help me figuring out'
+  speechP.innerHTML = 'I don\'t remember, help'
   return waiter(timeLength*4)
 }
 
 const speechBubbleTextChange5 = () => {
-  speechP.innerHTML = 'the password!'
+  speechP.innerHTML = 'me figuring it out!'
   return waiter(timeLength*4)
 }
 
@@ -127,12 +127,12 @@ const speechBubbleTextChange6 = () =>{
 }
 
 const speechBubbleTextChange7 = () => {
-  speechP.innerHTML = 'the right order to figure'
+  speechP.innerHTML = 'the right order to get'
   return waiter(timeLength*4)
 }
 
 const speechBubbleTextChange8 = () => {
-  speechP.innerHTML = 'out the password! Hint:'
+  speechP.innerHTML = 'the password! Hint:'
   return waiter(timeLength*4)
 }
 

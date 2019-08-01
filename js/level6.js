@@ -13,6 +13,7 @@ window.onload = () => sequence()
 const waiter = delay => new Promise(resolve => setTimeout(resolve, delay))
 
 const sequence = async () => {
+	await startSpeaking()
 	await peterTalks1()
 	await peterTalks2()
 	await peterTalks3()
@@ -20,27 +21,34 @@ const sequence = async () => {
 	await stopTalking()
 }
 
+const startSpeaking = () => {
+	stefan.style.backgroundImage = 'url(../Characters/Stefan/StefanSpeaking.gif)'
+	speechBubble.style.opacity = '1'
+	speechP.innerHTML = 'Hi Peter, I came to help!'
+  return waiter(timeLength*4)
+}
+
 const peterTalks1 = () => {
 	stefan.style.backgroundImage = 'url(../Characters/Stefan/Stefan-mild.png)'
 	peter.style.backgroundImage = 'url(../Characters/Peter/PeterSpeaking.gif)'
 	speechBubble.style.opacity = '1'
 	speechBubble.style.right = '0px'
-	speechP.innerHTML = 'Help me clean the'
+	speechP.innerHTML = 'Clean the boat with'
   return waiter(timeLength*4)
 }
 
 const peterTalks2 = () => {
-	speechP.innerHTML = 'boat with the soap!'
+	speechP.innerHTML = 'the soap! Hover the'
   return waiter(timeLength*4)
 }
 
 const peterTalks3 = () => {
-	speechP.innerHTML = 'Hover the circle and'
+	speechP.innerHTML = 'circle and follow it'
   return waiter(timeLength*4)
 }
 
 const peterTalks4 = () => {
-  speechP.innerHTML = 'follow it!'
+  speechP.innerHTML = 'with the cursor!'
   return waiter(timeLength*4)
 }
 

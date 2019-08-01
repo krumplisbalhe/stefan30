@@ -16,7 +16,8 @@
 }
 
 #options{
-	background-color: #CE8F99;
+	background-color: #e6cace;
+	height: 45%;
 	border-radius: 25px;
 	width: 60%;
 	transition: 0.5s;

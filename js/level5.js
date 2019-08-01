@@ -20,6 +20,8 @@ const sequence = async () => {
 	await mamaTalks3()
 	await mamaTalks4()
 	await mamaTalks5()
+	await mamaTalks6()
+	await mamaTalks7()
 	await mamaStops()
 }
 
@@ -54,7 +56,17 @@ const mamaTalks4 = () => {
 }
 
 const mamaTalks5 = () => {
-  speechP.innerHTML = 'Hurry up!'
+  speechP.innerHTML = 'Click on each food one'
+  return waiter(timeLength*4)
+}
+
+const mamaTalks6 = () => {
+  speechP.innerHTML = 'by one before the time'
+  return waiter(timeLength*4)
+}
+
+const mamaTalks7 = () => {
+  speechP.innerHTML = 'limit is up!'
   return waiter(timeLength*4)
 }
 
@@ -176,12 +188,16 @@ const mamaGoodbye = () => {
 	speechP.style.opacity = '1'
 	speechBubble.style.opacity = '1'
 	foods.style.opacity = '0'
-	speechP.innerHTML = 'Lol, you were slow! You'
+	speechP.innerHTML = 'Haha, you were slow!'
 	setTimeout(mamaGoodbye2, timeLength*4)
 }
 
-
 const mamaGoodbye2 = () => {
+	speechP.innerHTML = 'Don\'t worry, you'
+	setTimeout(mamaGoodbye3, timeLength*6)
+}
+
+const mamaGoodbye3 = () => {
 	speechP.innerHTML = 'can eat the rest later!'
 	setTimeout(toLevel6, timeLength*6)
 }

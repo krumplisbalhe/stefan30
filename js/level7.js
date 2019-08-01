@@ -6,7 +6,7 @@ const level = document.getElementById('level')
 const options = document.getElementById('options')
 const pebber = document.getElementById('pebber')
 
-const timeLength = 50 //TODO: TIME
+const timeLength = 500 //TODO: TIME
 
 window.onload = () => sequence()
 
@@ -49,7 +49,7 @@ const mormorTalks3 = () => {
 }
 
 const mormorTalks4 = () => {
-  speechP.innerHTML = 'from the PC room?'
+  speechP.innerHTML = 'from Morfar\'s PC room?'
   return waiter(timeLength*4)
 }
 

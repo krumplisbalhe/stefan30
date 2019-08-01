@@ -8,7 +8,7 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background: url("../Backgrounds/pcroom.gif");
+	background: url("../Backgrounds/level8.png");
 	opacity: 0.9;
   background-position: center;
   background-repeat: no-repeat;
@@ -16,7 +16,6 @@
 }
 
 #options{
-	background-color: #CE8F99;
 	border-radius: 25px;
 	width: 60%;
 	transition: 0.5s;
@@ -28,7 +27,7 @@
 	color: white;
 }
 
-#option1>img:hover, #option2>img:hover, #option3>img:hover{
+#option1:hover, #option2:hover{
 	transition: all .2s ease-in-out;
 	animation: grow 0.5s cubic-bezier(.36,.07,.19,.97) both;
 }
@@ -50,6 +49,15 @@
 	background-position: center;
   background-repeat: no-repeat;
 	background-size: cover;
+}
+
+#bambi{
+	width: 240px;
+	height: 130px;
+	background: url("../images/bambi.gif");
+	background-position: center;
+  background-repeat: no-repeat;
+	background-size: contain;
 }
 
 #speechBubble{
@@ -86,7 +94,7 @@ p{
 	position: fixed;
 	bottom: 0px;
 	right: 100px;
-	background: url("../Characters/Mormor/MormorHappy.png");
+	background: url("../Characters/Pia/PiaSpeaks1.png");
 	background-position: center;
   background-repeat: no-repeat;
 	background-size: cover;
