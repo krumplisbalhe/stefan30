@@ -16,8 +16,10 @@
 }
 
 #options{
+	position: fixed;
+	top: 300px;
 	border-radius: 25px;
-	width: 60%;
+	width: 50%;
 	transition: 0.5s;
 	opacity: 0;
 	display: flex;
@@ -29,15 +31,16 @@
 
 #option1:hover, #option2:hover{
 	transition: all .2s ease-in-out;
-	animation: grow 0.5s cubic-bezier(.36,.07,.19,.97) both;
+	animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
 }
 
-#option1,#option2,#option3{
+#option1,#option2{
 	padding: 10px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	cursor: pointer;
 }
 
 #stefan{
@@ -54,10 +57,22 @@
 #bambi{
 	width: 240px;
 	height: 130px;
+	position: fixed;
+	top: 100px;
 	background: url("../images/bambi.gif");
 	background-position: center;
   background-repeat: no-repeat;
 	background-size: contain;
+	opacity: 0;
+}
+
+#title{
+	position: fixed;
+	top: 230px;
+	opacity: 0;
+	color: white;
+	font-family: "pixelFatFont";
+	font-size: 40px;
 }
 
 #speechBubble{
@@ -121,8 +136,20 @@ p{
   }
 }
 
-@keyframes grow {
-  to{
-    transform: scale(1.65);
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
   }
 }

@@ -4,7 +4,8 @@ const speechP = document.getElementById('speechP')
 const pia = document.getElementById('pia')
 const level = document.getElementById('level')
 const options = document.getElementById('options')
-const correct = document.getElementById('option1')
+const bambi = document.getElementById('bambi')
+const title = document.getElementById('title')
 
 const timeLength = 50 //TODO: TIME
 
@@ -71,6 +72,8 @@ const piaStops = () => {
 	speechBubble.style.opacity = '0'
 	speechBubble.style.pointerEvents = 'none'
 	options.style.opacity = '1'
+	bambi.style.opacity = '1'
+	title.style.opacity = '1'
 	document.body.style.cursor = 'pointer'
   return waiter(timeLength*4)
 }
@@ -85,7 +88,7 @@ function checkCode() {
 			level.classList.add('blinkMe')
 			pia.style.backgroundImage = 'url(../Characters/Pia/PiaHappy.png)'
 			stefan.style.backgroundImage = 'url(../Characters/Stefan/StefanLooksUpHappy.png)'
-			setTimeout(toLevel5, timeLength*6)
+			setTimeout(toLevel9, timeLength*6)
 		} else {
 			level.textContent = 'WRONG'
 			level.classList.add('wrongBlinking')
@@ -95,6 +98,6 @@ function checkCode() {
 	}, false)
 }
 
-toLevel5 = () => {
+toLevel9 = () => {
 	window.location.href = 'level9.html'
 }
