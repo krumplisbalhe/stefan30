@@ -38,7 +38,7 @@ const peterTalks1 = () => {
 }
 
 const peterTalks2 = () => {
-	speechP.innerHTML = 'the soap! Hover the'
+	speechP.innerHTML = 'the soap: Hover the'
   return waiter(timeLength*4)
 }
 

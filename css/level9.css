@@ -8,48 +8,107 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background: url("../Backgrounds/pcroom.gif");
+	background: url("../Backgrounds/office.png");
 	opacity: 0.9;
   background-position: center;
   background-repeat: no-repeat;
 	background-size: cover;
 }
 
-#options{
-	background-color: #CE8F99;
-	border-radius: 25px;
-	width: 60%;
-	transition: 0.5s;
+#tinder{
+	width: 300px;
+	height: 500px;
+	background: url("../images/iphone.png");
+	background-position: center;
+  background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
 	opacity: 0;
-	display: flex;
-	align-items: center;
-	justify-content: space-evenly;
-	font-size: 28px;
-	color: white;
 }
 
-#option1>img:hover, #option2>img:hover, #option3>img:hover{
-	transition: all .2s ease-in-out;
-	animation: grow 0.5s cubic-bezier(.36,.07,.19,.97) both;
+#cross{
+	width: 35px;
+	height: 35px;
+	background: url("../images/cross.png");
+	background-position: center;
+  background-repeat: no-repeat;
+	background-size: cover;
+	position: absolute;
+	left: 80px;
+	bottom: 75px;
+	cursor: pointer;
 }
 
-#option1,#option2,#option3{
-	padding: 10px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+#star{
+	width: 35px;
+	height: 35px;
+	background: url("../images/star.png");
+	background-position: center;
+  background-repeat: no-repeat;
+	background-size: cover;
+	position: absolute;
+	left: 140px;
+	bottom: 75px;
+	cursor: pointer;
+}
+
+#heart{
+	width: 35px;
+	height: 35px;
+	background: url("../images/heart.png");
+	background-position: center;
+  background-repeat: no-repeat;
+	background-size: cover;
+	position: absolute;
+	left: 200px;
+	bottom: 75px;
+	cursor: pointer;
+}
+
+#imageContainer{
+	width: 177px;
+  height: 290px;
+	background: url("../images/pinup1.jpeg");
+	background-position: center;
+  background-repeat: no-repeat;
+	background-size: contain;
+	position: absolute;
+	left: 70px;
+  top: 73px;
+}
+
+#nameContainer{
+	position: absolute;
+	left: 70px;
+  top: 305px;
 }
 
 #stefan{
 	width: 240px;
 	height: 240px;
 	position: fixed;
-	bottom: 10px;
+	bottom: 0px;
+	right: 100px;
 	background: url("../Characters/Stefan/Stefan-mild.png");
 	background-position: center;
   background-repeat: no-repeat;
 	background-size: cover;
+}
+
+#rita{
+	width: 240px;
+	height: 240px;
+	position: fixed;
+	bottom: 0px;
+	right: 400px;
+	background: url("../Characters/Rita/Rita2.png");
+	background-position: center;
+  background-repeat: no-repeat;
+	background-size: cover;
+	opacity: 0;
+	transform: scaleX(-1);
+	pointer-events: none;
+
 }
 
 #speechBubble{
@@ -57,11 +116,25 @@
 	height: 185px;
 	position: fixed;
 	bottom: 180px;
+	right: 0px;
 	background: url("../images/speechBubble.png");
 	background-position: center;
   background-repeat: no-repeat;
 	background-size: cover;
 	opacity: 0;
+}
+
+#hearts{
+	position: fixed;
+	z-index: 2;
+	width: 100%;
+	height: 100%;
+	background: url("../images/heartConfetti.gif");
+	background-position: center;
+  background-repeat: no-repeat;
+	background-size: cover;
+	opacity: 0;
+	pointer-events: none;
 }
 
 p{
@@ -78,19 +151,6 @@ p{
 	position: fixed;
 	top: 20px;
 	left: 20px;
-}
-
-#pia{
-	width: 240px;
-	height: 240px;
-	position: fixed;
-	bottom: 0px;
-	right: 100px;
-	background: url("../Characters/Mormor/MormorHappy.png");
-	background-position: center;
-  background-repeat: no-repeat;
-	background-size: cover;
-	pointer-events: none;
 }
 
 .wrongBlinking{

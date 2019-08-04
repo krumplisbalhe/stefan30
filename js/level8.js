@@ -7,7 +7,7 @@ const options = document.getElementById('options')
 const bambi = document.getElementById('bambi')
 const title = document.getElementById('title')
 
-const timeLength = 50 //TODO: TIME
+const timeLength = 500 //TODO: TIME
 
 window.onload = () => sequence()
 

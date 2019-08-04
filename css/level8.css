@@ -52,6 +52,7 @@
 	background-position: center;
   background-repeat: no-repeat;
 	background-size: cover;
+	transform: scaleX(-1);
 }
 
 #bambi{
@@ -114,6 +115,7 @@ p{
   background-repeat: no-repeat;
 	background-size: cover;
 	pointer-events: none;
+	transform: scaleX(-1);
 }
 
 .wrongBlinking{
@@ -140,7 +142,7 @@ p{
   10%, 90% {
     transform: translate3d(-1px, 0, 0);
   }
-  
+
   20%, 80% {
     transform: translate3d(2px, 0, 0);
   }

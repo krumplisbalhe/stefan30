@@ -45,7 +45,7 @@ const anetteTalks1 = () => {
 }
 
 const anetteTalks2 = () => {
-	speechP.innerHTML = 'remember the secret'
+	speechP.innerHTML = 'remember the magic'
   return waiter(timeLength*4)
 }
 

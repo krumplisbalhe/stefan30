@@ -1,0 +1,98 @@
+.finalContainer{
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: url("../Backgrounds/garden.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.title2{
+	text-align: center;
+	color: #F8EA6D;
+	letter-spacing: 12px;
+	font-family: "pixelFatFont";
+	font-size: 80px;
+	position: fixed;
+	top: 30%;
+	background-repeat: no-repeat;
+	height: 100px;
+	width: 900px;
+}
+
+.title{
+	text-align: center;
+	color: #f7f7f7;
+	font-family: "pixelFatFont";
+	letter-spacing: 12px;
+	font-size: 80px;
+	position: fixed;
+	top: 30%;
+	background-repeat: no-repeat;
+	height: 100px;
+	width: 900px;
+	padding-left: 10px;
+}
+
+.title3{
+	margin-top: 200px;
+	text-align: center;
+}
+
+.restart{
+	color: white;
+}
+
+.play{
+	margin-top: 10px;
+	width: 100px;
+	height: 100px;
+	background-image: url("../images/play2.png");
+	background-position: center;
+  background-repeat: no-repeat;
+	background-size: cover;
+	filter: brightness(0) invert(1);
+}
+
+.pulse {
+  border-radius: 70px;
+  cursor: pointer;
+  box-shadow: 0 0 0 rgba(204,169,44, 0.4);
+  animation: pulse 2s infinite;
+}
+.pulse:hover {
+  animation: none;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
+  }
+  70% {
+      -webkit-box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+  }
+  100% {
+      -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+  }
+}
+@keyframes pulse {
+  0% {
+    -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
+    box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
+  }
+  70% {
+      -moz-box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+      box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+  }
+  100% {
+      -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+      box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+  }
+}
