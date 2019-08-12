@@ -8,7 +8,7 @@ const level1Container = document.getElementById('level1Container')
 const pernille = document.getElementById('pernille')
 const timeContainer = document.getElementById('timeContainer')
 
-const timeLength = 500 //TODO: TIME
+const timeLength = 1000 //TODO: TIME
 
 window.onload = () => sequence()
 
@@ -16,7 +16,6 @@ const waiter = delay => new Promise(resolve => setTimeout(resolve, delay))
 
 const sequence = async () => {
   await showStefan()
-  await waiter(500)
   await startSpeaking()
 	await speechBubbleAppear()
 	await speechBubbleTextChange()
@@ -71,7 +70,7 @@ const stefanStopsSpeaking = () => {
 	stefan.style.backgroundImage = 'url(../Characters/Stefan/Stefan1.png)'
 	speechBubble.style.opacity = '0'
 	speechBubble.pointerEvents = 'none'
-	return waiter(timeLength*2)
+	return waiter(timeLength*1)
 }
 
 const stefanIdea = () => {
@@ -138,7 +137,7 @@ const speechBubbleTextChange8 = () =>{
 const speechBubbleTextChange9 = () => {
 	speechP.innerHTML = 'and I\'m free!'
 	pernille.style.backgroundImage = 'url(../Characters/Pernille/PernilleSmile.png)'
-	setTimeout(pernilleStopsSpeaking, timeLength*4)
+	setTimeout(pernilleStopsSpeaking, timeLength*2)
 }
 
 startTimer = (duration, display) => {

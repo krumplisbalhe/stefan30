@@ -6,7 +6,7 @@ const level = document.getElementById('level')
 const circle = document.getElementById('circle')
 const spark = document.getElementById('fireworks')
 
-const timeLength = 500  //TODO: TIME
+const timeLength = 1000  //TODO: TIME
 
 window.onload = () => sequence()
 
@@ -59,6 +59,10 @@ const stopTalking = () => {
 	speechBubble.style.opacity = '0'
 	circle.style.opacity = '1'
 	$('#circle').one("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){
+		level.textContent = 'LEVEL COMPLETED'
+		level.classList.add('blinkMe')
+		level.style.left = '50%'
+		level.style.transform = "translateX(-262px)"
 		circle.style.opacity = '0'
 		boat.style.backgroundImage = 'url(../images/boat.png)'
 		stefan.style.backgroundImage = 'url(../Characters/Stefan/StefanLooksUpHappy.png)'

@@ -34,7 +34,7 @@
 	width: 240px;
 	height: 240px;
 	position: fixed;
-	bottom: 10px;
+	bottom: 0px;
 	background: url("../Characters/Stefan/Stefan-mild.png");
 	background-position: center;
   background-repeat: no-repeat;
@@ -63,7 +63,7 @@ p{
 
 #level{
 	font-family: "pixelFatFont";
-	color: white;
+	color: #9CD3CB;
 	font-size: 80px;
 	position: fixed;
 	top: 20px;

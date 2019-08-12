@@ -7,7 +7,7 @@ const code = document.getElementById('code')
 const codeBtn = document.getElementById('codeBtn')
 const divorce = document.getElementById('divorce')
 
-const timeLength = 500  //TODO: TIME
+const timeLength = 1000  //TODO: TIME
 
 window.onload = () => sequence()
 
@@ -15,7 +15,6 @@ const waiter = delay => new Promise(resolve => setTimeout(resolve, delay))
 
 const sequence = async () => {
 	await startSpeaking()
-	// await waiter(500)
 	await stefanTalks1()
 	await rieTalks1()
 	await rieTalks2()
@@ -85,7 +84,7 @@ const rieStops = () => {
 	speechBubble.style.pointerEvents = 'none'
 	code.style.opacity = '1'
 	codeBtn.style.opacity = '1'
-  return waiter(timeLength*4)
+  return waiter(timeLength*1)
 }
 
 function checkCode() {

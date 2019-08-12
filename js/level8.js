@@ -7,7 +7,7 @@ const options = document.getElementById('options')
 const bambi = document.getElementById('bambi')
 const title = document.getElementById('title')
 
-const timeLength = 500 //TODO: TIME
+const timeLength = 1000 //TODO: TIME
 
 window.onload = () => sequence()
 
@@ -75,7 +75,7 @@ const piaStops = () => {
 	bambi.style.opacity = '1'
 	title.style.opacity = '1'
 	document.body.style.cursor = 'pointer'
-  return waiter(timeLength*4)
+  return waiter(timeLength*1)
 }
 
 function checkCode() {

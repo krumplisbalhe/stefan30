@@ -7,7 +7,7 @@ const foods = document.getElementById('foods')
 const coin = document.getElementById('coin')
 const timeContainer = document.getElementById('timeContainer')
 
-const timeLength = 500  //TODO: TIME
+const timeLength = 1000  //TODO: TIME
 
 window.onload = () => sequence()
 
@@ -184,7 +184,7 @@ const mamaGoodbye = () => {
 	level.style.left = '50%'
 	level.style.transform = "translateX(-262px)"
 	mama.style.backgroundImage = 'url(../Characters/Mama/MamaHappy.png)'
-	stefan.style.backgroundImage = 'url(../Characters/Stefan/StefanLooksUpSad.png)'
+	stefan.style.backgroundImage = 'url(../Characters/Stefan/StefanSurprised.png)'
 	speechP.style.opacity = '1'
 	speechBubble.style.opacity = '1'
 	foods.style.opacity = '0'
@@ -194,12 +194,12 @@ const mamaGoodbye = () => {
 
 const mamaGoodbye2 = () => {
 	speechP.innerHTML = 'Don\'t worry, you'
-	setTimeout(mamaGoodbye3, timeLength*6)
+	setTimeout(mamaGoodbye3, timeLength*4)
 }
 
 const mamaGoodbye3 = () => {
 	speechP.innerHTML = 'can eat the rest later!'
-	setTimeout(toLevel6, timeLength*6)
+	setTimeout(toLevel6, timeLength*4)
 }
 
 toLevel6 = () => {

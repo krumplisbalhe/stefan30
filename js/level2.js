@@ -40,7 +40,7 @@ const solutionm = document.getElementById('Sm')
 const backgroundBox = document.getElementById('backgroundBox')
 const money = document.getElementById('money')
 
-const timeLength = 500  //TODO: TIME
+const timeLength = 1000  //TODO: TIME
 
 window.onload = () => sequence()
 
@@ -48,7 +48,6 @@ const waiter = delay => new Promise(resolve => setTimeout(resolve, delay))
 
 const sequence = async () => {
   await showStefan()
-  await waiter(500)
   await startSpeaking()
 	await speechBubbleAppear()
 	await speechBubbleTextChange()
@@ -106,14 +105,14 @@ const speechBubbleTextChange4 = () => {
 
 const speechBubbleTextChange5 = () => {
   speechP.innerHTML = 'me figuring it out!'
-  return waiter(timeLength*4)
+  return waiter(timeLength*1)
 }
 
 const stefanStopsSpeaking = () => {
 	stefan.style.backgroundImage = 'url(../Characters/Stefan/StefanLineLips.png)'
 	speechBubble.style.opacity = '0'
 	speechBubble.pointerEvents = 'none'
-	return waiter(timeLength*4)
+	return waiter(timeLength*1)
 }
 
 const speechBubbleTextChange6 = () =>{

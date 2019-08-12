@@ -6,7 +6,7 @@ const level = document.getElementById('level')
 const options = document.getElementById('options')
 const coin = document.getElementById('coin')
 
-const timeLength = 500  //TODO: TIME
+const timeLength = 1000  //TODO: TIME
 
 window.onload = () => sequence()
 

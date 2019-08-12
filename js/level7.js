@@ -6,7 +6,7 @@ const level = document.getElementById('level')
 const options = document.getElementById('options')
 const pebber = document.getElementById('pebber')
 
-const timeLength = 500 //TODO: TIME
+const timeLength = 1000 //TODO: TIME
 
 window.onload = () => sequence()
 
@@ -66,7 +66,7 @@ const mormorStops = () => {
 	speechBubble.style.pointerEvents = 'none'
 	options.style.opacity = '1'
 	document.body.style.cursor = 'pointer'
-  return waiter(timeLength*4)
+  return waiter(timeLength*1)
 }
 
 function checkCode() {

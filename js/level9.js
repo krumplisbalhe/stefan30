@@ -8,7 +8,7 @@ const image = document.getElementById('imageContainer')
 const rita = document.getElementById('rita')
 const hearts = document.getElementById('hearts')
 
-const timeLength = 500 //TODO: TIME
+const timeLength = 1000 //TODO: TIME
 
 window.onload = () => sequence()
 
@@ -40,7 +40,7 @@ const tinder1 = () => {
 	speechBubble.style.opacity = '0'
 	speechBubble.style.pointerEvents = 'none'
 	name.textContent = "Susan"
-  return waiter(timeLength*4)
+  return waiter(timeLength*1)
 }
 
 function checkFirst() {
@@ -48,15 +48,15 @@ function checkFirst() {
 		var target = evt.target
 		if (target.id === 'heart') {
 			level.style.left = '50%'
-			level.style.transform = "translateX(-262px)"
-			level.textContent = "VERY VERY BAD"
+			level.style.transform = "translateX(-85px)"
+			level.textContent = "WRONG"
 			level.classList.add('blinkMe')
 			stefan.style.backgroundImage = 'url(../Characters/Stefan/StefanLooksUpSad.png)'
 		}
 		if (target.id === 'star') {
 			level.style.left = '50%'
-			level.style.transform = "translateX(-262px)"
-			level.textContent = "VERY VERY VERY BAD"
+			level.style.transform = "translateX(-85px)"
+			level.textContent = "WRONG"
 			level.classList.add('blinkMe')
 			stefan.style.backgroundImage = 'url(../Characters/Stefan/StefanLooksUpSad.png)'
 		}
@@ -81,15 +81,15 @@ function checkSecond() {
 		var target = evt.target
 		if (target.id === 'heart') {
 			level.style.left = '50%'
-			level.style.transform = "translateX(-262px)"
-			level.textContent = "BAD"
+			level.style.transform = "translateX(-85px)"
+			level.textContent = "WRONG"
 			level.classList.add('blinkMe')
 			stefan.style.backgroundImage = 'url(../Characters/Stefan/StefanLooksUpSad.png)'
 		}
 		if (target.id === 'star') {
 			level.style.left = '50%'
-			level.style.transform = "translateX(-262px)"
-			level.textContent = "VERY BAD"
+			level.style.transform = "translateX(-85px)"
+			level.textContent = "WRONG"
 			level.classList.add('blinkMe')
 			stefan.style.backgroundImage = 'url(../Characters/Stefan/StefanLooksUpSad.png)'
 		}
@@ -126,14 +126,15 @@ function checkThird() {
 			level.style.transform = "translateX(-262px)"
 			level.textContent = "LEVEL COMPLETED"
 			level.classList.add('blinkMe')
-			stefan.style.backgroundImage = 'url(../Characters/Stefan/StefanLooksUpSad.png)'
+			stefan.style.backgroundImage = 'url(../Characters/Stefan/StefanPillango.png)'
 			setTimeout(toFinal, timeLength*6)
 		}
 		if (target.id === 'cross') {
-			level.style.left = '20px'
-			level.style.transform = "translateX(0px)"
+			stefan.style.backgroundImage = 'url(../Characters/Stefan/StefanLooksUpSad.png)'
+			level.style.transform = "translateX(-158px)"
 			level.textContent = "GAME OVER"
-			level.classList.remove('blinkMe')
+			level.style.left = '50%'
+			level.classList.add('blinkMe')
 			setTimeout(toReStart, timeLength*4)
 		}
 	}, false)
@@ -145,11 +146,12 @@ toReStart = () => {
 
 toFinal = () => {
 	stefan.style.backgroundImage = 'url(../Characters/Stefan/Stefan1.png)'
+	stefan.style.transform = "translateX(-400px)"
 	tinder.style.opacity = '0'
 	rita.style.opacity = '1'
 	level.style.opacity = '0'
 	hearts.style.opacity = '1'
-	setTimeout(jump, timeLength*10)
+	setTimeout(jump, timeLength*6)
 }
 
 jump = () => {
